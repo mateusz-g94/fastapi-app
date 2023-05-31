@@ -16,6 +16,6 @@ RUN apt-get update \
 COPY api.py api.py
 COPY app/ app/
 
-EXPOSE 8000
+EXPOSE 5000
 
-ENTRYPOINT ["gunicorn", "api:app", "--workers", "2", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8000"]
+ENTRYPOINT ["gunicorn", "api:app", "--workers", "2", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:5000"]
