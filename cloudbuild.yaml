@@ -3,7 +3,7 @@ steps:
     args:
       - build
       - -t
-      - ${_GCR_REGION}.gcr.io/$PROJECT_ID/${_SERVICE_NAME}:$COMMIT_SHA
+      - gcr.io/$PROJECT_ID/${_SERVICE_NAME}:$COMMIT_SHA
       - .
  
   - name: "gcr.io/cloud-builders/docker"
