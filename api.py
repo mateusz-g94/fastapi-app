@@ -27,7 +27,7 @@ async def cluster(data: RequestBody) -> ClusterResponse:
     Get clustering results for the data sent in the body.
     """
     logger.info(
-        f"Clustering {len(data.data)} data points, into {data.model_conf.n_clusters} clusters"
+        f"Clustering {len(data.data)} data points, into {data.model_conf.n_clusters} clusters."
     )
     logger.info(f"Model configuration: {data.model_conf}")
     clusters = cluster_data(data.data, data.model_conf)
