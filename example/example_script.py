@@ -8,9 +8,8 @@ if __name__ == "__main__":
         for line in fh.readlines():
             p_line = json.loads(line)
             lines.append(p_line)
-
     response = requests.post(
-        "http://localhost:8090/cluster",
+        "https://fastapi-app-0101-yq35nm2v3q-lm.a.run.app/cluster",
         json={"data": lines, "model_conf": {"n_clusters": 4}},
     )
     print(response.json())
